@@ -229,4 +229,7 @@ CMakeFiles/arkanoid.dir/src/Ball.cpp.o: \
  /usr/include/SFML/Graphics/Glsl.hpp /usr/include/SFML/Graphics/Glsl.inl \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
- /usr/include/SFML/Graphics/VertexBuffer.hpp
+ /usr/include/SFML/Graphics/VertexBuffer.hpp \
+ /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/istream \
+ /usr/include/c++/14.1.1/bits/istream.tcc \
+ /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h

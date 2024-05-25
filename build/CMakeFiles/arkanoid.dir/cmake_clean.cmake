@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/arkanoid.dir/src/Ball.cpp.o"
   "CMakeFiles/arkanoid.dir/src/Ball.cpp.o.d"
+  "CMakeFiles/arkanoid.dir/src/Brick.cpp.o"
+  "CMakeFiles/arkanoid.dir/src/Brick.cpp.o.d"
+  "CMakeFiles/arkanoid.dir/src/Game.cpp.o"
+  "CMakeFiles/arkanoid.dir/src/Game.cpp.o.d"
   "CMakeFiles/arkanoid.dir/src/Paddle.cpp.o"
   "CMakeFiles/arkanoid.dir/src/Paddle.cpp.o.d"
   "CMakeFiles/arkanoid.dir/src/main.cpp.o"

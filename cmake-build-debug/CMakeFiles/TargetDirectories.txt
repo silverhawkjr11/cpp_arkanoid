@@ -1,0 +1,3 @@
+/home/saeed/Desktop/cpp_env/arkanoid/cmake-build-debug/CMakeFiles/arkanoid.dir
+/home/saeed/Desktop/cpp_env/arkanoid/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/saeed/Desktop/cpp_env/arkanoid/cmake-build-debug/CMakeFiles/rebuild_cache.dir
