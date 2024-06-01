@@ -2,7 +2,6 @@ CMakeFiles/arkanoid.dir/src/Game.cpp.o: \
  /home/saeed/Desktop/cpp_env/arkanoid/src/Game.cpp \
  /usr/include/stdc-predef.h \
  /home/saeed/Desktop/cpp_env/arkanoid/src/Game.h \
- /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h \
  /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
  /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
  /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
@@ -231,7 +230,8 @@ CMakeFiles/arkanoid.dir/src/Game.cpp.o: \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h \
  /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.h \
+ /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h \
+ /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h \
  /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/istream \
  /usr/include/c++/14.1.1/bits/istream.tcc
