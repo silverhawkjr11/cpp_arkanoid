@@ -1,64 +1,36 @@
 #include "Ball.h"
-#include <iostream>
-#include "Brick.h"
 
-Ball::Ball(float startX, float startY) {
-    ball.setRadius(10);
-    ball.setFillColor(sf::Color::White);
-    ball.setPosition(startX, startY);
-    speedX = 0.2;
-    speedY = 0.2;
-}
-
-sf::CircleShape Ball::getShape() {
-    return ball;
+Ball::Ball(float startX, float startY)
+    : velocityX(0.1), velocityY(0.1) { // Reduced speed
+  shape.setRadius(10);
+  shape.setFillColor(sf::Color::White);
+  shape.setPosition(startX, startY);
 }
 
 void Ball::update() {
-    ball.move(speedX, speedY);
+  shape.move(velocityX, velocityY);
 
-    if (ball.getPosition().x < 0 || ball.getPosition().x + ball.getRadius() * 2 > 800) { // Assuming window width is 800
-        reboundSides();
-    }
-
-    if (ball.getPosition().y < 0) {
-        reboundTop();
-    }
-
-    if (ball.getPosition().y + ball.getRadius() * 2 > 600) { // Assuming window height is 600
-        hitBottom();
-    }
+  if (shape.getPosition().x <= 0 ||
+      shape.getPosition().x + shape.getRadius() * 2 >= 800) {
+    velocityX = -velocityX;
+  }
+  if (shape.getPosition().y <= 0) {
+    velocityY = -velocityY;
+  }
 }
 
-void Ball::reboundSides() {
-    speedX = -speedX;
+void Ball::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+  target.draw(shape, states);
 }
 
-void Ball::reboundPaddle() {
-    speedY = -speedY;
+sf::Vector2f Ball::getPosition() const { return shape.getPosition(); }
+
+void Ball::reset() {
+  shape.setPosition(400, 300);
+  // velocityX = 2.5; // Reduced speed
+  // velocityY = 2.5; // Reduced speed
 }
 
-void Ball::reboundTop() {
-    speedY = -speedY;
-}
+float Ball::getRadius() const { return shape.getRadius(); }
 
-void Ball::hitBottom() {
-    // Handle ball hitting the bottom of the screen, e.g., reset position
-    ball.setPosition(400, 300);
-    speedY = -speedY; // Reverse the direction for simplicity
-}
-
-void Ball::checkCollisionWithPaddle(const sf::RectangleShape& paddle) {
-    if (ball.getGlobalBounds().intersects(paddle.getGlobalBounds())) {
-        reboundPaddle();
-    }
-}
-
-void Ball::checkCollisionWithBricks(std::vector<Brick>& bricks) {
-    for (auto& brick : bricks) {
-        if (!brick.getIsDestroyed() && ball.getGlobalBounds().intersects(brick.getShape().getGlobalBounds())) {
-            brick.destroy();
-            reboundPaddle(); // Assuming same behavior as hitting paddle
-        }
-    }
-}
+void Ball::reverseY() { velocityY = -velocityY; }

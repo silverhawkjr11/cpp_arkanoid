@@ -5,36 +5,31 @@
 #include "Paddle.h"
 #include "Ball.h"
 #include "Brick.h"
+#include "GameObject.h"
 #include <vector>
 
 class Game {
 private:
     sf::RenderWindow window;
     Paddle paddle;
-    Ball ball;
+    Ball ball;  // Declare ball here
     std::vector<Brick> bricks;
-    int lives;
-    int level;
-    int score;
-    bool isGameOver;
-    bool isMenuActive;
+    std::vector<GameObject*> gameObjects;
+    sf::Text healthText;
     sf::Font font;
-    sf::Text livesText;
-    sf::Text scoreText;
-    sf::Text gameOverText;
-    sf::Text menuText;
-
-    void resetLevel();
-    void loadLevel(int level);
-    void updateText();
-    void handleMenu();
+    int health;
+    bool isPaused;
 
 public:
     Game();
     void run();
-    void checkCollisions();
+    void processEvents();
     void update();
     void render();
+    void loadLevel();
+    void checkCollisions();
+    void updateHealth();
+    void togglePause();
 };
 
-#endif
+#endif // GAME_H

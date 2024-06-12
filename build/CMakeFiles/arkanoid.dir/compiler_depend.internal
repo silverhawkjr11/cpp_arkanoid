@@ -4,7 +4,7 @@
 CMakeFiles/arkanoid.dir/src/Ball.cpp.o
  /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.cpp
  /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h
- /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h
+ /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h
  /usr/include/SFML/Config.hpp
  /usr/include/SFML/Graphics.hpp
  /usr/include/SFML/Graphics/BlendMode.hpp
@@ -172,7 +172,6 @@ CMakeFiles/arkanoid.dir/src/Ball.cpp.o
  /usr/include/c++/14.1.1/bits/hash_bytes.h
  /usr/include/c++/14.1.1/bits/invoke.h
  /usr/include/c++/14.1.1/bits/ios_base.h
- /usr/include/c++/14.1.1/bits/istream.tcc
  /usr/include/c++/14.1.1/bits/locale_classes.h
  /usr/include/c++/14.1.1/bits/locale_classes.tcc
  /usr/include/c++/14.1.1/bits/locale_conv.h
@@ -245,8 +244,6 @@ CMakeFiles/arkanoid.dir/src/Ball.cpp.o
  /usr/include/c++/14.1.1/initializer_list
  /usr/include/c++/14.1.1/ios
  /usr/include/c++/14.1.1/iosfwd
- /usr/include/c++/14.1.1/iostream
- /usr/include/c++/14.1.1/istream
  /usr/include/c++/14.1.1/iterator
  /usr/include/c++/14.1.1/locale
  /usr/include/c++/14.1.1/map
@@ -307,6 +304,7 @@ CMakeFiles/arkanoid.dir/src/Ball.cpp.o
 CMakeFiles/arkanoid.dir/src/Brick.cpp.o
  /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.cpp
  /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h
+ /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h
  /usr/include/SFML/Config.hpp
  /usr/include/SFML/Graphics.hpp
  /usr/include/SFML/Graphics/BlendMode.hpp
@@ -608,6 +606,7 @@ CMakeFiles/arkanoid.dir/src/Game.cpp.o
  /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h
  /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h
  /home/saeed/Desktop/cpp_env/arkanoid/src/Game.h
+ /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h
  /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.h
  /usr/include/SFML/Config.hpp
  /usr/include/SFML/Graphics.hpp
@@ -910,6 +909,7 @@ CMakeFiles/arkanoid.dir/src/Game.cpp.o
 
 CMakeFiles/arkanoid.dir/src/Paddle.cpp.o
  /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.cpp
+ /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h
  /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.h
  /usr/include/SFML/Config.hpp
  /usr/include/SFML/Graphics.hpp
@@ -1212,6 +1212,7 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o
  /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h
  /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h
  /home/saeed/Desktop/cpp_env/arkanoid/src/Game.h
+ /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h
  /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.h
  /usr/include/SFML/Config.hpp
  /usr/include/SFML/Graphics.hpp

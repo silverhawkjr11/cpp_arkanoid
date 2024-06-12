@@ -2,19 +2,17 @@
 #define BRICK_H
 
 #include <SFML/Graphics.hpp>
+#include "GameObject.h"
 
-class Brick {
+class Brick : public GameObject {
 private:
-    sf::RectangleShape brick;
-    bool isDestroyed;
-
+    sf::RectangleShape shape;
 public:
     Brick(float startX, float startY);
-    ~Brick() {}
-
-    sf::RectangleShape getShape() const; // Make getShape() a const method
-    bool getIsDestroyed() const;
-    void destroy();
+    void update() override;
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+    sf::Vector2f getPosition() const;
+    sf::Vector2f getSize() const;
 };
 
-#endif
+#endif // BRICK_H

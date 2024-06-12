@@ -231,6 +231,7 @@ CMakeFiles/arkanoid.dir/src/Game.cpp.o: \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
  /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.h \
+ /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h \
  /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h \
  /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h \
  /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/istream \

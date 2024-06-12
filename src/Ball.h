@@ -2,28 +2,21 @@
 #define BALL_H
 
 #include <SFML/Graphics.hpp>
-#include <vector>
+#include "GameObject.h"
 
-// Forward declaration of Brick class
-class Brick;
-
-class Ball {
+class Ball : public GameObject {
 private:
-    sf::CircleShape ball;
-    float speedX, speedY;
-
+    sf::CircleShape shape;
+    float velocityX;
+    float velocityY;
 public:
     Ball(float startX, float startY);
-    ~Ball() {}
-
-    sf::CircleShape getShape();
-    void update();
-    void reboundSides();
-    void reboundPaddle();
-    void reboundTop();
-    void hitBottom();
-    void checkCollisionWithPaddle(const sf::RectangleShape& paddle);
-    void checkCollisionWithBricks(std::vector<Brick>& bricks);
+    void update() override;
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+    sf::Vector2f getPosition() const;
+    void reset();
+    float getRadius() const;
+    void reverseY();
 };
 
-#endif
+#endif // BALL_H

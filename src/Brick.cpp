@@ -1,20 +1,23 @@
 #include "Brick.h"
 
-Brick::Brick(float startX, float startY) : isDestroyed(false) {
-    brick.setSize(sf::Vector2f(60, 20)); // Set brick size
-    brick.setFillColor(sf::Color::Red); // Set brick color
-    brick.setPosition(startX, startY);
+Brick::Brick(float startX, float startY) {
+    shape.setSize(sf::Vector2f(50, 20));
+    shape.setFillColor(sf::Color::Green);
+    shape.setPosition(startX, startY);
 }
 
-sf::RectangleShape Brick::getShape() const { // Reflect the const-ness here
-    return brick;
+void Brick::update() {
+    // Brick does not need to update for now
 }
 
-bool Brick::getIsDestroyed() const {
-    return isDestroyed;
+void Brick::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+    target.draw(shape, states);
 }
 
-void Brick::destroy() {
-    isDestroyed = true;
-    brick.setFillColor(sf::Color::Transparent); // Make brick invisible
+sf::Vector2f Brick::getPosition() const {
+    return shape.getPosition();
+}
+
+sf::Vector2f Brick::getSize() const {
+    return shape.getSize();
 }

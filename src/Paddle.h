@@ -1,21 +1,19 @@
-
 #ifndef PADDLE_H
 #define PADDLE_H
 
 #include <SFML/Graphics.hpp>
+#include "GameObject.h"
 
-class Paddle {
+class Paddle : public GameObject {
 private:
-  sf::RectangleShape paddle;
-  float speed;
-
+    sf::RectangleShape shape;
 public:
-  Paddle(float startX, float startY);
-  ~Paddle() {}
-  sf::RectangleShape getShape();
-  void moveLeft();
-  void moveRight();
-  void update();
+    Paddle();
+    void update() override;
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+    void reset();
+    sf::Vector2f getPosition() const;
+    sf::Vector2f getSize() const;
 };
 
-#endif
+#endif // PADDLE_H

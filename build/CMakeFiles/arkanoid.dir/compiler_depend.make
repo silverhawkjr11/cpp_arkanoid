@@ -3,7 +3,7 @@
 
 CMakeFiles/arkanoid.dir/src/Ball.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.cpp \
   /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h \
-  /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h \
+  /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h \
   /usr/include/SFML/Config.hpp \
   /usr/include/SFML/Graphics.hpp \
   /usr/include/SFML/Graphics/BlendMode.hpp \
@@ -171,7 +171,6 @@ CMakeFiles/arkanoid.dir/src/Ball.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
   /usr/include/c++/14.1.1/bits/hash_bytes.h \
   /usr/include/c++/14.1.1/bits/invoke.h \
   /usr/include/c++/14.1.1/bits/ios_base.h \
-  /usr/include/c++/14.1.1/bits/istream.tcc \
   /usr/include/c++/14.1.1/bits/locale_classes.h \
   /usr/include/c++/14.1.1/bits/locale_classes.tcc \
   /usr/include/c++/14.1.1/bits/locale_conv.h \
@@ -244,8 +243,6 @@ CMakeFiles/arkanoid.dir/src/Ball.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
   /usr/include/c++/14.1.1/initializer_list \
   /usr/include/c++/14.1.1/ios \
   /usr/include/c++/14.1.1/iosfwd \
-  /usr/include/c++/14.1.1/iostream \
-  /usr/include/c++/14.1.1/istream \
   /usr/include/c++/14.1.1/iterator \
   /usr/include/c++/14.1.1/locale \
   /usr/include/c++/14.1.1/map \
@@ -305,6 +302,7 @@ CMakeFiles/arkanoid.dir/src/Ball.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 
 CMakeFiles/arkanoid.dir/src/Brick.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.cpp \
   /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h \
+  /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h \
   /usr/include/SFML/Config.hpp \
   /usr/include/SFML/Graphics.hpp \
   /usr/include/SFML/Graphics/BlendMode.hpp \
@@ -605,6 +603,7 @@ CMakeFiles/arkanoid.dir/src/Game.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
   /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h \
   /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h \
   /home/saeed/Desktop/cpp_env/arkanoid/src/Game.h \
+  /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h \
   /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.h \
   /usr/include/SFML/Config.hpp \
   /usr/include/SFML/Graphics.hpp \
@@ -906,6 +905,7 @@ CMakeFiles/arkanoid.dir/src/Game.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h
 
 CMakeFiles/arkanoid.dir/src/Paddle.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.cpp \
+  /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h \
   /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.h \
   /usr/include/SFML/Config.hpp \
   /usr/include/SFML/Graphics.hpp \
@@ -1207,6 +1207,7 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
   /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h \
   /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h \
   /home/saeed/Desktop/cpp_env/arkanoid/src/Game.h \
+  /home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h \
   /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.h \
   /usr/include/SFML/Config.hpp \
   /usr/include/SFML/Graphics.hpp \
@@ -1509,11 +1510,17 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 
 /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.cpp:
 
+/usr/include/c++/14.1.1/iostream:
+
+/usr/include/c++/14.1.1/bits/istream.tcc:
+
 /home/saeed/Desktop/cpp_env/arkanoid/src/Paddle.h:
 
 /home/saeed/Desktop/cpp_env/arkanoid/src/Game.h:
 
 /home/saeed/Desktop/cpp_env/arkanoid/src/Game.cpp:
+
+/home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h:
 
 /home/saeed/Desktop/cpp_env/arkanoid/src/Brick.cpp:
 
@@ -1562,12 +1569,6 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++locale.h:
 
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
-
-/usr/include/c++/14.1.1/type_traits:
-
-/usr/include/c++/14.1.1/tuple:
-
-/usr/include/c++/14.1.1/system_error:
 
 /usr/include/bits/types/locale_t.h:
 
@@ -1643,8 +1644,6 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 
 /usr/include/c++/14.1.1/bits/locale_classes.tcc:
 
-/usr/include/c++/14.1.1/bits/istream.tcc:
-
 /usr/include/SFML/Window/Mouse.hpp:
 
 /usr/include/SFML/Window/Keyboard.hpp:
@@ -1674,6 +1673,10 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 /usr/include/SFML/System/Lock.hpp:
 
 /usr/include/c++/14.1.1/ext/aligned_buffer.h:
+
+/usr/include/SFML/Graphics/Texture.hpp:
+
+/usr/include/c++/14.1.1/ext/type_traits.h:
 
 /usr/include/SFML/Window/Event.hpp:
 
@@ -1715,6 +1718,8 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 
 /usr/include/SFML/Graphics.hpp:
 
+/usr/include/c++/14.1.1/type_traits:
+
 /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.cpp:
 
 /usr/include/c++/14.1.1/bits/ostream_insert.h:
@@ -1727,19 +1732,11 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 
 /home/saeed/Desktop/cpp_env/arkanoid/src/Ball.h:
 
-/usr/include/SFML/Graphics/Texture.hpp:
+/home/saeed/Desktop/cpp_env/arkanoid/src/GameObject.h:
 
-/usr/include/c++/14.1.1/ext/type_traits.h:
+/usr/include/c++/14.1.1/bits/alloc_traits.h:
 
-/home/saeed/Desktop/cpp_env/arkanoid/src/Brick.h:
-
-/usr/include/SFML/Window/VideoMode.hpp:
-
-/usr/include/SFML/Graphics/Font.hpp:
-
-/usr/include/c++/14.1.1/bits/ostream.tcc:
-
-/usr/include/c++/14.1.1/ext/alloc_traits.h:
+/usr/include/c++/14.1.1/concepts:
 
 /usr/include/features.h:
 
@@ -1754,6 +1751,14 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 /usr/include/c++/14.1.1/bits/basic_ios.tcc:
 
 /usr/include/SFML/Graphics/VertexBuffer.hpp:
+
+/usr/include/SFML/Window/VideoMode.hpp:
+
+/usr/include/SFML/Graphics/Font.hpp:
+
+/usr/include/c++/14.1.1/bits/ostream.tcc:
+
+/usr/include/c++/14.1.1/ext/alloc_traits.h:
 
 /usr/include/SFML/Graphics/Drawable.hpp:
 
@@ -1839,11 +1844,15 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 
 /usr/include/asm-generic/errno.h:
 
-/usr/include/SFML/Graphics/Color.hpp:
-
 /usr/include/c++/14.1.1/istream:
 
+/usr/include/SFML/Graphics/Color.hpp:
+
 /usr/include/SFML/System.hpp:
+
+/usr/include/SFML/System/Vector2.inl:
+
+/usr/include/SFML/System/Thread.inl:
 
 /usr/include/stdio.h:
 
@@ -1904,14 +1913,6 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 /usr/include/bits/types/clockid_t.h:
 
 /usr/include/bits/stdint-intn.h:
-
-/usr/include/SFML/System/Thread.inl:
-
-/usr/include/SFML/System/Vector2.inl:
-
-/usr/include/c++/14.1.1/bits/alloc_traits.h:
-
-/usr/include/c++/14.1.1/concepts:
 
 /usr/include/bits/types/struct_sched_param.h:
 
@@ -2077,6 +2078,8 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 
 /usr/include/c++/14.1.1/bits/uses_allocator.h:
 
+/usr/include/c++/14.1.1/system_error:
+
 /usr/include/bits/types/wint_t.h:
 
 /usr/include/c++/14.1.1/bits/utility.h:
@@ -2105,8 +2108,6 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 
 /usr/include/c++/14.1.1/ios:
 
-/usr/include/c++/14.1.1/iostream:
-
 /usr/include/c++/14.1.1/map:
 
 /usr/include/c++/14.1.1/bits/stl_construct.h:
@@ -2118,3 +2119,5 @@ CMakeFiles/arkanoid.dir/src/main.cpp.o: /home/saeed/Desktop/cpp_env/arkanoid/src
 /usr/include/SFML/Graphics/Image.hpp:
 
 /usr/include/c++/14.1.1/string_view:
+
+/usr/include/c++/14.1.1/tuple:
