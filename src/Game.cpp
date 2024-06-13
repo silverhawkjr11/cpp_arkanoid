@@ -1,12 +1,16 @@
 #include "Game.h"
 #include <iostream> // For debugging
+#include <filesystem> // For std::filesystem::current_path
+#include <cstdlib> // For exit
 
 Game::Game()
     : window(sf::VideoMode(800, 600), "Arkanoid"), paddle(), ball(400, 300),
       health(110), isPaused(false) {
   if (!font.loadFromFile("./arial.ttf")) {
-    std::cerr << "Failed to load font!" << std::endl;
+    std::cerr << "Failed to load font! Please make sure 'arial.ttf' is in the correct directory." << std::endl;
+    std::cerr << "Current working directory: " << std::filesystem::current_path() << std::endl;
     // Handle error, possibly exit the program
+    exit(1); // Exit with a non-zero status to indicate failure
   }
   healthText.setFont(font);
   healthText.setCharacterSize(24);
@@ -100,9 +104,7 @@ void Game::checkCollisions() {
     if (health <= 0) {
       // Handle game over
       // For now, just reset the ball and paddle
-
       exit(0);
-
     } else {
       ball.reset();
       paddle.reset();
@@ -119,4 +121,6 @@ void Game::updateHealth() {
   healthText.setString("Health: " + std::to_string(health));
 }
 
-void Game::togglePause() { isPaused = !isPaused; }
+void Game::togglePause() {
+  isPaused = !isPaused;
+}
