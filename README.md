@@ -1,7 +1,8 @@
 # Arkanoid Game Project
 
 This project is part of a C++ course designed to showcase various object-oriented programming principles such as inheritance, abstraction, and class relationships. The project is a clone of the classic Arkanoid game, where the player controls a paddle to bounce a ball and break bricks.
-
+the project is on github
+https://github.com/silverhawkjr11/cpp_arkanoid.git
 ## Table of Contents
 
 - [Features](#features)
